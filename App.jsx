@@ -8,8 +8,8 @@ import CameraScreen from './src/Screens/CameraScreen';
 import SavedQr from './src/Screens/SavedQr';
 import QRCodeProvider from './src/Context/ContextProvider';
 import { darkTheme, lightTheme } from './src/theme';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import {  useTheme } from './src/Context/ThemeProvider';
+
+import { useTheme } from './src/Context/ThemeProvider';
 import ToggleTheme from './src/components/ToggleTheme';
 
 const Stack = createNativeStackNavigator();
@@ -24,7 +24,7 @@ const HomeNavigation = () => {
         headerStyle: {
           backgroundColor: theme.header,
         },
-        headerTintColor: theme.text, 
+        headerTintColor: theme.text,
         headerTitleStyle: {
           fontWeight: 'bold',
         },
@@ -39,7 +39,6 @@ const HomeNavigation = () => {
         component={DataScreen}
         options={{
           title: "QR Detail",
-          headerRight: () => <ToggleTheme />,
         }}
       />
     </Stack.Navigator>
@@ -69,9 +68,7 @@ function App() {
             component={HomeNavigation}
             options={{
               title: "Home",
-              tabBarIcon: ({ color, size }) => (
-                <Ionicons name="home-outline" color={color} size={size} />
-              ),
+
 
             }}
           />
@@ -80,9 +77,7 @@ function App() {
             component={SavedQr}
             options={{
               title: "Saved QR", // Set the tab bar label
-              tabBarIcon: ({ color, size }) => (
-                <Ionicons name="save-outline" color={color} size={size} />
-              ),
+
             }}
           />
         </Tab.Navigator>

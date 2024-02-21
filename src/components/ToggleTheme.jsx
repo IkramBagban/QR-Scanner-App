@@ -10,7 +10,7 @@ const ToggleTheme = () => {
 
   return (
     <TouchableOpacity onPress={toggleTheme}>
-      <Text style={{ marginRight: 15, color: theme.text }}>
+      <Text style={{ marginRight: 15, color: theme.text, fontWeight : 'bold' }}>
         {isDarkMode ? 'Light Mode' : 'Dark Mode'}
       </Text>
     </TouchableOpacity>
