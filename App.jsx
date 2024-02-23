@@ -58,7 +58,7 @@ function App() {
             tabBarInactiveTintColor: theme.textSecondary,
             tabBarStyle: {
               backgroundColor: theme.header,
-              borderTopColor: theme.border,
+              borderTopColor: theme.border
             },
           })}
         >
@@ -67,17 +67,14 @@ function App() {
             name="HomeNavigation"
             component={HomeNavigation}
             options={{
-              title: "Home",
-
-
+              title: "Home"
             }}
           />
           <Tab.Screen
             name="SavedQr"
             component={SavedQr}
             options={{
-              title: "Saved QR", // Set the tab bar label
-
+              title: "Saved QR"
             }}
           />
         </Tab.Navigator>
